@@ -1,0 +1,11 @@
+Mögliche Bilde für halfimage:
+ - End
+ - Nether
+ - Wüste / Tempel
+ - Höhle / Lavasee
+ - (Unterwassertempel)
+
+Entfernen:
+ - nur Birke
+ - (Berge)
+	

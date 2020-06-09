@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type="image/svg" href="bilder/Logo/Logo.svg">
+		<title>Flat Shadow</title>
+		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="styleMenu.css" type="text/css">
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<div class="menu" id="menuBody">
+			<a href="#" id="Logo"><img alt="Logo" src="bilder/Logo/LogoSchwarz.svg"></a>
+			<div class="icon" onClick="openMenu()"><i class="fa fa-bars" id="iconFont"></i></div>
+			<p>
+				<a id="visit">Overview</a><i class="space">&nbsp;-&nbsp;</i>
+				<a href="#">Download</a><i class="space">&nbsp;-&nbsp;</i>
+				<a href="#">Ingame</a>
+			</p>
+		</div>
+		
+		<script>
+			function openMenu() {
+				var mobileMenu = document.getElementById("menuBody");
+				var icon = document.getElementById("iconFont");
+				if (mobileMenu.className === "menu") {
+					mobileMenu.className += " responsive";
+					icon.className = "fa fa-close";
+				} else {
+					mobileMenu.className = "menu";
+					icon.className = "fa fa-bars";
+				}
+			}
+		</script>
+	</body>
+</html>
