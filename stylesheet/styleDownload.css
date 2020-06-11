@@ -36,12 +36,40 @@
 	--backColor:#21c0cc;
 }
 .infobox p{
-	font-family: Nunito;
 	font-size:1.2em;
 	color:#353535;
 	font-weight: bold;
 	z-index:1;
+	left: 30px;
 }
+
+/*Beschreibung für Alpha */
+.alphaInfo{
+	display: block;
+	position: absolute;
+	left: 27%;
+	top: 40px;
+	
+	width: 280px;
+	background-color: rgba(53,53,53,0.8);
+	border: #353535 solid 1px;
+	padding: 3px 25px 3px 6px;
+	z-index: 21;
+	color: #fff;
+	transform: scale(1.5);
+}
+.alphaInfo i{
+	position: absolute;
+	top: 3px;
+	right: 6px;
+	font-size: 1.5em;
+	transition: 0.3s;
+}
+.alphaInfo i:hover{
+	color: #188f9e;
+	cursor: pointer;
+}
+
 /*Für Schräge Kanten*/
 .infobox .cutLeft,.infobox .cutRight{
 	position:absolute;
@@ -71,7 +99,7 @@
 	/*
 	background-color:#444;
 	*/
-	background-image:url("../bilder/download/bg2.png");
+	background-image:url("../bilder/download/bg3.png");
 	background-color: #353535;
 	box-shadow: 35px 35px rgba(0,0,0,0.3);
 	
@@ -95,8 +123,8 @@
 .downloadBox h5{
 	position:absolute;
 	padding-top:30px;
+	left: 4px;
 	font-weight: bold;
-	font-family: Nunito;
 	font-size:2.5em;
 	color:#188f9e;
 }
@@ -109,7 +137,6 @@
 	position:absolute;
 	padding-top:35px;
 	font-weight: bold;
-	font-family: Nunito;
 	font-size:1.5em;
 	color:#fff;
 	white-space: nowrap;
@@ -128,6 +155,15 @@
 	border:solid #fff 3px;
 	image-rendering: pixelated;
 }
+.downloadBox p{
+	position:absolute;
+	max-width: 180px;
+	
+	top:37px;
+	font-size: 1em;
+	color: #B2222D;
+	left: 4px;
+}
 .downloadBox a{
 	position:absolute;
 	background-color:#188f9e;
@@ -140,7 +176,6 @@
 	
 	text-decoration:none;
 	font-size:1.2em;
-	font-family:Nunito;
 	font-weight: bold;
 	color:#fff;
 	box-shadow:0px 18px 0px rgba(0,0,0,0.2) inset,
@@ -152,6 +187,33 @@
 	background-color:#22c9d6;
 	cursor:pointer;
 }
+
+/*Coming Soon*/
+.comingSoon{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	background-color: rgba(0,0,0,0.75);
+	z-index: 20;
+}
+.comingSoon h2{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	
+	color:#188f9e;
+	font-size: 7em;
+	white-space: nowrap;
+	font-family: var(--type1);
+}
+
+
 @media screen and (max-width: 1150px) { /*Wenn es sich nebeneinander nicht mehr ausgeht, wird untereinander angeordnet*/
 	.downloadBox{
 		width:100%;
@@ -161,6 +223,9 @@
 	}
 	#description{
 		display:none;
+	}
+	.comingSoon h2{
+		font-size: 4.5em;
 	}
 }
 
@@ -178,9 +243,13 @@
 	.infoboxFrame{
 		margin-left:10px;
 	}
+	.comingSoon h2{
+		font-size: 3.5em;
+	}
 }
 /*.downloadBox object{
 	position:absolute;
 	bottom:20px;
 	left:60px;
 }*/
+

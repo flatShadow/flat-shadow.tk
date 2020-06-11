@@ -26,7 +26,6 @@
 	padding:10px 40px;
 }
 .infobox p{
-	font-family: Nunito;
 	font-size:1.8em;
 	color:#353535;
 	font-weight: bold;
@@ -155,8 +154,7 @@
 	width: 100%;
 	text-align: center;
 	bottom: 10px; 
-	
-	font-family: Nunito;
+
 	font-weight: bold;
 	color: #353535;
 	font-size: 2.2em;

@@ -11,6 +11,7 @@ window.onload = function(){
 	var modul = document.getElementById("modul");
 	var div1 = document.getElementById("changeFrame");
 	div1.onmousemove = changeModul;
+	div1.onmousedown = changeModul;
 	resizeFunction();
 	
 	var pic1 = document.getElementById("pic1");
