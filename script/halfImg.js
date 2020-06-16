@@ -19,8 +19,7 @@ window.addEventListener("orientationchange", orentationHint);
 
 //  --- Regler und Bild anpassen
 window.onload = function(){
-	document.getElementsByClassName("loading")[0].style.display = "none";
-	
+	fade();
 	document.getElementsByClassName("startAnimation")[0].children[0].style.animationPlayState = "running"; //Animation starten wenn Seite fertig geladen wurde
 	document.getElementsByClassName("startAnimation")[0].children[1].style.animationPlayState = "running";
 	document.getElementsByClassName("startAnimation")[0].children[1].children[0].style.animationPlayState = "running";

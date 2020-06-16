@@ -11,6 +11,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
+		<link rel="stylesheet" href="../stylesheet/styleLoading.css" type="text/css">
 		<link rel="stylesheet" href="../stylesheet/styleAll.css" type="text/css">
 		<link rel="stylesheet" href="../stylesheet/styleDownload.css" type="text/css">
 		<style type="text/css">
@@ -18,6 +19,12 @@
 		</style>
 	</head>
 	<body>
+		<!-- Loading... -->
+		<div class="loadingScreen">
+			<!--<img src="../bilder/background/loadingLogo.gif" alt="loading...">-->
+			<img src="../bilder/background/loading.svg" alt="loading...">
+		</div>
+		
 		<div class="menu" id="menuBody"> <!----  Menü  ---->
 			<a href="../index.html" id="Logo"><img alt="Logo" src="../bilder/Logo/LogoSchwarz.svg"></a>
 			<div class="icon" onClick="openMenu()"><i class="fa fa-bars" id="iconFont"></i></div>
@@ -132,5 +139,11 @@
 		
 		<script src="../script/menu.js"></script>
 		<script src="../script/version.js"></script>
+		<script src="../script/loading.js"></script>
+		<script>
+			window.onload = function(){
+				fade();
+			}
+		</script>
 	</body>
 </html>

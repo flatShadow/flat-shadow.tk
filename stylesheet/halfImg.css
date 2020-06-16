@@ -75,21 +75,24 @@
 	
 	left: calc(50% - 5rem);
 	z-index: 15;
-	animation: phoneTurn 1.8s ease-out infinite;
+	animation: phoneTurn 2.1s ease-out infinite;
 }
 
 @keyframes phoneTurn{
 	0%{
 		transform: rotate(0deg);
 	}
-	20%{
+	18%{
 		transform: rotate(0deg);
 	}
-	40%{
+	30%{
 		transform: rotate(-10deg);
 	}
-	90%{
+	70%{
 		transform: rotate(95deg);
+	}
+	80%{
+		transform: rotate(90deg);
 	}
 	100%{
 		transform: rotate(90deg);

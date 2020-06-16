@@ -3,17 +3,6 @@
 	grau: #353535
 */
 
-/* --- Loading... --- */
-.loading{
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	
-	z-index: 50;
-}
-
 /* --- Startanimation --- */
 .startAnimation{
 	margin-top: calc(2.5rem + 30px);

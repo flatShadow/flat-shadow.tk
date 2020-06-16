@@ -11,6 +11,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
+		<link rel="stylesheet" href="stylesheet/styleLoading.css" type="text/css">
 		<link rel="stylesheet" href="stylesheet/styleAll.css" type="text/css">
 		<link rel="stylesheet" href="stylesheet/halfImg.css" type="text/css">
 		<link rel="stylesheet" href="stylesheet/styleIndex.css" type="text/css">
@@ -19,6 +20,11 @@
 		</style>
 	</head>
 	<body onresize="resizeFunction()">
+		<!-- Loading... -->
+		<div class="loadingScreen">
+			<img src="bilder/background/loadingLogo.gif" alt="loading...">
+		</div>
+		
 		<div class="menu" id="menuBody"> <!----  Menü  ---->
 			<a id="Logo"><img alt="Logo" src="bilder/Logo/LogoSchwarz.svg"></a>
 			<div class="icon" onClick="openMenu()"><i class="fa fa-bars" id="iconFont"></i></div>
@@ -28,8 +34,6 @@
 				<a href="pages/gallery.html">Gallery</a>
 			</p>
 		</div>
-		
-		<img src="bilder/background/loading.gif" class="loading" alt="loading...">
 		
 		<div class="startAnimation">
 			<h1>Flat Shadow</h1>
@@ -75,6 +79,7 @@
 		</footer>
 		
 		<script src="script/menu.js"></script>
+		<script src="script/loading.js"></script>
 		<script src="script/halfImg.js"></script>
 	</body>
 </html>

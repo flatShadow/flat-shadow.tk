@@ -63,7 +63,7 @@
 	box-shadow: 35px 35px rgba(0,0,0,0.3);
 	
 	transition:0.2s;
-	z-index:100;
+	z-index:50;
 	padding: 15px 1vw;
 }
 
