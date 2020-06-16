@@ -3,8 +3,24 @@ document.getElementsByClassName("startAnimation")[0].children[0].style.animation
 document.getElementsByClassName("startAnimation")[0].children[1].style.animationPlayState = "paused";
 document.getElementsByClassName("startAnimation")[0].children[1].children[0].style.animationPlayState = "paused";
 
+//Animation der Drehaufforderung
+var handy = document.getElementById('rotate');
+
+function orentationHint(){
+	var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+	if(orientation === "landscape-primary"){
+		handy.style.display = "none";
+	 }
+	else{
+		handy.style.display = "block";
+	}
+}
+window.addEventListener("orientationchange", orentationHint);
+
 //  --- Regler und Bild anpassen
 window.onload = function(){
+	document.getElementsByClassName("loading")[0].style.display = "none";
+	
 	document.getElementsByClassName("startAnimation")[0].children[0].style.animationPlayState = "running"; //Animation starten wenn Seite fertig geladen wurde
 	document.getElementsByClassName("startAnimation")[0].children[1].style.animationPlayState = "running";
 	document.getElementsByClassName("startAnimation")[0].children[1].children[0].style.animationPlayState = "running";
@@ -13,6 +29,7 @@ window.onload = function(){
 	div1.onmousemove = changeModul;
 	div1.onmousedown = changeModul;
 	resizeFunction();
+	orentationHint();
 	
 	var pic1 = document.getElementById("pic1");
 	var pic2 = document.getElementById("pic2");
@@ -48,6 +65,8 @@ var images = [ //Array von allen Bildern
 	["bilder/halfImg/default3.png", "bilder/halfImg/FS3.png"],
 	["bilder/halfImg/default4.png", "bilder/halfImg/FS4.png"],
 	["bilder/halfImg/default5.png", "bilder/halfImg/FS5.png"],
+	["bilder/halfImg/default6.png", "bilder/halfImg/FS6.png"],
+	["bilder/halfImg/default7.png", "bilder/halfImg/FS7.png"],
 ]
 var currentImg = 0;
 function changeImg(x){

@@ -65,3 +65,33 @@
 	height: 70%;
 	z-index: 10;
 }
+
+.divBild p{
+	display: none;
+	position: absolute;
+	top: -50px;
+	font-size: 20rem;
+	color: #dbdbdb;
+	
+	left: calc(50% - 5rem);
+	z-index: 15;
+	animation: phoneTurn 1.8s ease-out infinite;
+}
+
+@keyframes phoneTurn{
+	0%{
+		transform: rotate(0deg);
+	}
+	20%{
+		transform: rotate(0deg);
+	}
+	40%{
+		transform: rotate(-10deg);
+	}
+	90%{
+		transform: rotate(95deg);
+	}
+	100%{
+		transform: rotate(90deg);
+	}
+}

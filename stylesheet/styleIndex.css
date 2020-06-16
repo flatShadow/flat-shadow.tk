@@ -2,11 +2,24 @@
 	Blau: #188f9e
 	grau: #353535
 */
+
+/* --- Loading... --- */
+.loading{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	
+	z-index: 50;
+}
+
 /* --- Startanimation --- */
 .startAnimation{
+	margin-top: calc(2.5rem + 30px);
 	position: relative;
 	width: 100%;
-	height: calc(100vh - 75px);
+	height: calc(100vh - calc(2.5rem + 30px));
 	overflow: hidden;
 }
 .startAnimation h1{
@@ -19,19 +32,20 @@
 	transform: translateY(-50%);
 	text-align: center;
 	font-size:13vw;
+	
   	-webkit-text-stroke-color: #353535;
   	-webkit-text-stroke-width: 0.35vw;
 	
 	animation: animateText 3s ease;
 	
 }
-/*
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 980px) {
 	.startAnimation h1{
 		font-size:22vw;
 		line-height: 90%;
 	}
-}*/
+}
 
 .startAnimation img{
 	position: relative;
@@ -56,7 +70,7 @@
 }
 @keyframes animateImg{
 	1%{
-		top: 200%;
+		top: 250%;
 	}
 	2%{
 		top: 100%;
