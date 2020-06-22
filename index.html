@@ -16,7 +16,9 @@
 		<link rel="stylesheet" href="stylesheet/halfImg.css" type="text/css">
 		<link rel="stylesheet" href="stylesheet/styleIndex.css" type="text/css">
 		<style type="text/css">
-			
+			html{ /*keine Scrollbar beim Laden*/
+				overflow: hidden;
+			}
 		</style>
 	</head>
 	<body onresize="resizeFunction()">
@@ -63,6 +65,10 @@
 				<img src="bilder/halfImg/Modul.svg" id="modul" />
 				
 				<div class="lockImg"></div> <!--Sperrt die Bilder vom drücken-->
+			</div>
+			
+			<div class="loadingImg" id="loadIMG">
+				<img src="bilder/background/loading.gif" alt="loading...">
 			</div>
 			
 			<p class="fa fa-mobile-phone" id="rotate"></p>

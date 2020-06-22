@@ -30,17 +30,17 @@ window.onload = function(){
 	resizeFunction();
 	orentationHint();
 	
-	var pic1 = document.getElementById("pic1");
-	var pic2 = document.getElementById("pic2");
+	
 }
-
+var pic1 = document.getElementById("pic1");
+	var pic2 = document.getElementById("pic2");
 
 function resizeFunction(){ //aktualisiert wennn das Fenster die Größe ändert
 	var heightImg = (window.innerWidth*0.7)*0.52415; //Berechnet die Höhe des Bildes 
 	document.documentElement.style.setProperty('--imgHeight',heightImg + "px");
 }
 
-function changeModul(e) { //Funktion, um positionen für Bild und Regel zu laden
+function changeModul(e) { //Funktion, um positionen für Bild und Regel zu laden	
 	var posX = e.clientX - window.innerWidth*0.15;
 	document.documentElement.style.setProperty('--wid',posX + "px");
 	
@@ -57,15 +57,30 @@ function changeModul(e) { //Funktion, um positionen für Bild und Regel zu laden
 	document.documentElement.style.setProperty('--marginModul',posModul + "px");
 }
 
+
+//  --- Ladescreen Halfimg --- //
+var load = document.getElementById('loadIMG');
+var time = Date.now();
+
+pic2.onload = function() {
+	if(Date.now() - time < 250){ // Wenn die Datei schnell geladen wird, wird der Ladescreen nicht angezeigt
+	   load.style.display = "none";
+	}
+	else{
+		load.style.opacity = 0;
+		setTimeout(() => { load.style.display = "none"; }, 800); //Element erst 500ms nach ausblendung entfernen
+	}
+}
+
 //  ---  Bild ändern ---
 var images = [ //Array von allen Bildern
-	["bilder/halfImg/default1.png", "bilder/halfImg/FS1.png"],
-	["bilder/halfImg/default2.png", "bilder/halfImg/FS2.png"],
-	["bilder/halfImg/default3.png", "bilder/halfImg/FS3.png"],
-	["bilder/halfImg/default4.png", "bilder/halfImg/FS4.png"],
-	["bilder/halfImg/default5.png", "bilder/halfImg/FS5.png"],
-	["bilder/halfImg/default6.png", "bilder/halfImg/FS6.png"],
-	["bilder/halfImg/default7.png", "bilder/halfImg/FS7.png"],
+	["bilder/halfImg/default1.png", "bilder/halfImg/FS1.png", 1], //0-> nicht geladen, 1-> gealden
+	["bilder/halfImg/default2.png", "bilder/halfImg/FS2.png", 0],
+	["bilder/halfImg/default3.png", "bilder/halfImg/FS3.png", 0],
+	["bilder/halfImg/default4.png", "bilder/halfImg/FS4.png", 0],
+	["bilder/halfImg/default5.png", "bilder/halfImg/FS5.png", 0],
+	["bilder/halfImg/default6.png", "bilder/halfImg/FS6.png", 0],
+	["bilder/halfImg/default7.png", "bilder/halfImg/FS7.png", 0],
 ]
 var currentImg = 0;
 function changeImg(x){
@@ -77,7 +92,14 @@ function changeImg(x){
 	else if(currentImg>=images.length){
 		currentImg = 0;
 	}
-
+		
+	if(images[currentImg][2] == 0){ //ladescreen laden falls Bild noch nicht geladen
+		load.style.opacity = 100; 
+		load.style.display = "block"; 
+		images[currentImg][2] = 1;
+	}
+		
 	pic1.src=images[currentImg][0];
 	pic2.src=images[currentImg][1];
+	time = Date.now(); //Zeit des Wegsendens
 }

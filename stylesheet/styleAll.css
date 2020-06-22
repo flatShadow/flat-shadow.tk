@@ -7,10 +7,15 @@
 :root{
 	--type1: "Riffic";
 	--type2: "Matias";
+	--type3: "Powerweld";
 }
 @font-face { 
 	font-family: 'Matias';
     src: url('../type/Matias_Webfont.ttf') format('truetype');
+}
+@font-face { 
+	font-family: 'Powerweld';
+    src: url('../type/Powerweld.ttf') format('truetype');
 }
 @font-face { 
 	font-family: 'Riffic';
