@@ -63,13 +63,15 @@ var load = document.getElementById('loadIMG');
 var time = Date.now();
 
 pic2.onload = function() {
-	if(Date.now() - time < 250){ // Wenn die Datei schnell geladen wird, wird der Ladescreen nicht angezeigt
+	/*if(Date.now() - time < 250){ // Wenn die Datei schnell geladen wird, wird der Ladescreen nicht angezeigt
 	   load.style.display = "none";
 	}
 	else{
 		load.style.opacity = 0;
 		setTimeout(() => { load.style.display = "none"; }, 800); //Element erst 500ms nach ausblendung entfernen
-	}
+	}*/
+	load.style.opacity = 0;
+		setTimeout(() => { load.style.display = "none"; }, 800); //Element erst 500ms nach ausblendung entfernen
 }
 
 //  ---  Bild ändern ---
@@ -101,5 +103,5 @@ function changeImg(x){
 		
 	pic1.src=images[currentImg][0];
 	pic2.src=images[currentImg][1];
-	time = Date.now(); //Zeit des Wegsendens
+	//time = Date.now(); //Zeit des Wegsendens
 }
