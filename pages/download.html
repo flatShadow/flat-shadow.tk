@@ -10,6 +10,7 @@
 		<title>Flat Shadow</title>
 		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		
 		<link rel="stylesheet" href="../stylesheet/styleLoading.css" type="text/css">
 		<link rel="stylesheet" href="../stylesheet/styleAll.css" type="text/css">
@@ -18,7 +19,7 @@
 			
 		</style>
 	</head>
-	<body>
+	<body onresize="resizeFunction()">
 		<!-- Loading... -->
 		<div class="loadingScreen">
 			<!--<img src="../bilder/background/loadingLogo.gif" alt="loading...">-->
@@ -129,11 +130,44 @@
 		<h3 class="text">Now enjoy the beauty of Minecraft.</h3>
 		
 		<footer>
-			<div class="links">
-				<a href="#">Contact me</a><br/>
-				<a href="#">Impressum</a>
+			<div class="footerTop">
+				<div class="linkFrame">
+					<div class="CircleFrame">
+						<a href="#" class="socialMedia" target="_blank">
+							<i class="fa fa-youtube-play"></i>
+						</a>
+						<p>YouTube</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="#" class="socialMedia" target="_blank">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<p>Twitter</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="#" class="socialMedia" target="_blank">
+							<i class="fa fa-reddit"></i>
+						</a>
+						<p>Reddit</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="#" class="socialMedia" target="_blank">
+							<i class="fa fa-instagram"></i>
+						</a>
+						<p>Instagram</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="#" class="socialMedia" target="_blank">
+							<i class="fa fa-envelope"></i>
+						</a>
+						<p>Mail</p>
+					</div>
+				</div>
 			</div>
-			<p>Julian Haidn</p>
+			
+			<div class="footerBot">
+				<p>&copy; FlatShadow | Creator: Julian Haidn</p>
+			</div>
 		</footer>
 		
 		
@@ -142,7 +176,13 @@
 		<script src="../script/loading.js"></script>
 		<script>
 			window.onload = function(){
+				resizeFunction();
 				fade();
+			}
+			
+			function resizeFunction(){
+				var cw = $('.socialMedia').width();
+				$('.socialMedia').css({'height':cw+'px'});
 			}
 		</script>
 	</body>

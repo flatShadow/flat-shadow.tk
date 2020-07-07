@@ -81,7 +81,7 @@ var blockArr = [ //Array von allen Blöcken + Beschreibung
 			["../bilder/gallery/items/tool2.png", "Shovel"],
 			["../bilder/gallery/items/tool3.png", "Hoe"],
 			["../bilder/gallery/items/tool4.png", "Bow"],
-			["../bilder/gallery/items/tool5.png", "Fisching Rod"],
+			["../bilder/gallery/items/tool5.png", "Fishing Rod"],
 			["../bilder/gallery/items/tool6.png", "Shears"],
 		],
 		[ //Resource 2

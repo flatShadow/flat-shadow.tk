@@ -9,3 +9,4 @@ function openMenu() {
 		icon.className = "fa fa-bars";
 	}
 }
+

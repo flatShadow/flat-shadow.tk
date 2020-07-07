@@ -1,0 +1,36 @@
+/*
+	Blau: #188f9e
+	grau: #353535
+*/
+
+.divVideo{
+	width:100%;
+	background-image:url("../bilder/background/bg2.png");
+	outline:solid rgba(0,0,0,0.1) 15px;
+}
+
+.YTframe{
+	padding:100px 0px;
+	margin:auto;
+	width:70%;
+	text-align:center;
+}
+.YT {
+	position: relative; 
+	padding-bottom: 56.25%; /* ratio 16x9 */
+	height: 0; 
+	overflow: hidden; 
+	width: 100%;
+	height: auto;
+	
+	border:solid #188f9e 8px;
+	background-color:#188f9e;
+	box-shadow: 35px 35px rgba(0,0,0,0.3);
+}
+.YT iframe {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+}

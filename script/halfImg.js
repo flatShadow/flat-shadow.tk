@@ -25,8 +25,8 @@ window.onload = function(){
 	document.getElementsByClassName("startAnimation")[0].children[1].children[0].style.animationPlayState = "running";
 	var modul = document.getElementById("modul");
 	var div1 = document.getElementById("changeFrame");
-	div1.onmousemove = changeModul;
-	div1.onmousedown = changeModul;
+	div1.onmousemove = changePC;
+	//div1.ontouchstart = changeMobile;
 	resizeFunction();
 	orentationHint();
 	
@@ -38,11 +38,26 @@ var pic1 = document.getElementById("pic1");
 function resizeFunction(){ //aktualisiert wennn das Fenster die Größe ändert
 	var heightImg = (window.innerWidth*0.7)*0.52415; //Berechnet die Höhe des Bildes 
 	document.documentElement.style.setProperty('--imgHeight',heightImg + "px");
+	
+	var cw = $('.socialMedia').width();
+	$('.socialMedia').css({'height':cw+'px'});
 }
 
-function changeModul(e) { //Funktion, um positionen für Bild und Regel zu laden	
+function changeMobile(e){ // NOT WORKING
+	var posX = e.touches[0].clientX;
+	document.documentElement.style.setProperty('--wid',posX + "px");
+	console.log(e.touches[0].clientX);
+	changeModul(posX);
+}
+
+
+function changePC(e){
 	var posX = e.clientX - window.innerWidth*0.15;
 	document.documentElement.style.setProperty('--wid',posX + "px");
+	
+	changeModul(posX);
+}
+function changeModul(posX) { //Funktion, um positionen für Bild und Regel zu laden	
 	
 	//  Stelle der Reglers
 	if(posX < 0){
@@ -76,13 +91,13 @@ pic2.onload = function() {
 
 //  ---  Bild ändern ---
 var images = [ //Array von allen Bildern
-	["bilder/halfImg/default1.png", "bilder/halfImg/FS1.png", 1], //0-> nicht geladen, 1-> gealden
-	["bilder/halfImg/default2.png", "bilder/halfImg/FS2.png", 0],
-	["bilder/halfImg/default3.png", "bilder/halfImg/FS3.png", 0],
-	["bilder/halfImg/default4.png", "bilder/halfImg/FS4.png", 0],
-	["bilder/halfImg/default5.png", "bilder/halfImg/FS5.png", 0],
-	["bilder/halfImg/default6.png", "bilder/halfImg/FS6.png", 0],
-	["bilder/halfImg/default7.png", "bilder/halfImg/FS7.png", 0],
+	["bilder/halfImg/default1.png", "bilder/halfImg/FS1.png", true], //false-> nicht geladen, true-> gealden
+	["bilder/halfImg/default2.png", "bilder/halfImg/FS2.png", false],
+	["bilder/halfImg/default3.png", "bilder/halfImg/FS3.png", false],
+	["bilder/halfImg/default4.png", "bilder/halfImg/FS4.png", false],
+	["bilder/halfImg/default5.png", "bilder/halfImg/FS5.png", false],
+	["bilder/halfImg/default6.png", "bilder/halfImg/FS6.png", false],
+	["bilder/halfImg/default7.png", "bilder/halfImg/FS7.png", false],
 ]
 var currentImg = 0;
 function changeImg(x){
@@ -95,10 +110,10 @@ function changeImg(x){
 		currentImg = 0;
 	}
 		
-	if(images[currentImg][2] == 0){ //ladescreen laden falls Bild noch nicht geladen
+	if(!images[currentImg][2]){ //ladescreen laden falls Bild noch nicht geladen
 		load.style.opacity = 100; 
 		load.style.display = "block"; 
-		images[currentImg][2] = 1;
+		images[currentImg][2] = true;
 	}
 		
 	pic1.src=images[currentImg][0];
