@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Minecraft Texturepack">
+		<meta name="keywords" content="Flat Shadow, Flat Shadow Pack, Flat Shadow download, Minecraft Texturepack, Minecraft, Free Texturepack, Free Minecraft Texturepack, Texturepack, Comic Style,Comic">
+		<meta name="author" content="Julian Haidn">
+		
+		<link rel="icon" type="image/svg" href="../bilder/Logo/Logo.svg">
+		<title>Flat Shadow</title>
+		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="../stylesheet/styleLoading.css" type="text/css">
+		<link rel="stylesheet" href="../stylesheet/styleAll.css" type="text/css">
+		<link rel="stylesheet" href="../stylesheet/styleAboutMe.css" type="text/css">
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body onresize="resizeFunction()">
+		<!-- Loading... -->
+		<div class="loadingScreen">
+			<!--<img src="../bilder/background/loadingLogo.gif" alt="loading...">-->
+			<img src="../bilder/background/loading.svg" alt="loading...">
+		</div>
+		
+		<div class="menu" id="menuBody"> <!----  Menü  ---->
+			<a href="../index.html" id="Logo"><img alt="Logo" src="../bilder/Logo/LogoSchwarz.svg"></a>
+			<div class="icon" onClick="openMenu()"><i class="fa fa-bars" id="iconFont"></i></div>
+			<p>
+				<a href="../index.html">Overview</a><i class="space">&nbsp;-&nbsp;</i>
+				<a href="download.html">Download</a><i class="space">&nbsp;-&nbsp;</i>
+				<a href="gallery.html">Gallery</a><i class="space">&nbsp;-&nbsp;</i>
+				<a id="visit">About me</a>
+			</p>
+		</div>
+		
+		<h1>Flat Shadow</h1>
+		<h3>about me</h3>
+		
+		<div class="contentBox">
+			<div class="plantlayer">
+				<img id="plant1" src="../bilder/aboutMe/plant1.png" alt="paenia"/>
+				<img id="plant2" src="../bilder/aboutMe/plant2.png" alt="sapling"/>
+				<img id="plant3" src="../bilder/aboutMe/plant3.png" alt="orchid"/>
+				<img id="plant4" src="../bilder/aboutMe/plant4.png" alt="mushroom"/>
+			</div>
+			<div class="topLayer"></div>
+			<div class="contentLayer">
+				<p>
+					Hi,<br/>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+				</p>
+				<div class="ladder"></div>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="footerTop">
+				<div class="linkFrame">
+					<div class="CircleFrame">
+						<a href="https://www.youtube.com/channel/UCiCGrCuvTRuxOSg63eyC_6g" class="socialMedia" target="_blank">
+							<i class="fa fa-youtube-play"></i>
+						</a>
+						<p>YouTube</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="https://twitter.com/flat_shadow" class="socialMedia" target="_blank">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<p>Twitter</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="https://www.reddit.com/user/flatshadow_textures" class="socialMedia" target="_blank">
+							<i class="fa fa-reddit"></i>
+						</a>
+						<p>Reddit</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="https://www.instagram.com/flatshadow_textures/" class="socialMedia" target="_blank">
+							<i class="fa fa-instagram"></i>
+						</a>
+						<p>Instagram</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="mailto:flatshadow.mail@gmail.com" class="socialMedia" target="_blank">
+							<i class="fa fa-envelope"></i>
+						</a>
+						<p>Mail</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="footerBot">
+				<p>&copy; FlatShadow | Creator: Julian Haidn</p>
+			</div>
+		</footer>
+		
+		
+		<script src="../script/menu.js"></script>
+		<script src="../script/version.js"></script>
+		<script src="../script/loading.js"></script>
+		<script>
+			window.onload = function(){
+				resizeFunction();
+				fade();
+			}
+			
+			function resizeFunction(){
+				var cw = $('.socialMedia').width();
+				$('.socialMedia').css({'height':cw+'px'});
+			}
+		</script>
+	</body>
+</html>

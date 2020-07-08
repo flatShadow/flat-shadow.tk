@@ -88,6 +88,7 @@ h4{
 	color:#fff;
 	margin: 0px 40px;
 	transition:0.2s;
+	white-space: nowrap;
 }
 .menu p{
 	color:#fff;

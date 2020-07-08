@@ -117,9 +117,10 @@ var blockArr = [ //Array von allen Blöcken + Beschreibung
 		],
 		[ //Extra 5
 			["../bilder/gallery/items/extra0.png", "Book"],
-			["../bilder/gallery/items/extra1.png", "Water Bucket"],
-			["../bilder/gallery/items/extra2.png", "Ender Pearl"],
-			["../bilder/gallery/items/extra3.png", "Fireworks"],
+			["../bilder/gallery/items/extra1.png", "Feather"],
+			["../bilder/gallery/items/extra2.png", "Water Bucket"],
+			["../bilder/gallery/items/extra3.png", "Ender Pearl"],
+			["../bilder/gallery/items/extra4.png", "Fireworks"],
 		],
 	],
 ];
