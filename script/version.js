@@ -7,27 +7,27 @@ var versions = [ //Array version, Available, hintergund
 	[
 		"alpha",
 		"none", //none -> available, block -> not available
-		"../bilder/download/bg3.png",
+		"bilder/download/bg3.png",
 	],
 	[
 		"1.7",
 		"block",
-		"../bilder/download/bg1.png",
+		"bilder/download/bg1.png",
 	],
 	[
 		"1.8",
 		"block",
-		"../bilder/download/bg2.png",
+		"bilder/download/bg2.png",
 	],
 	[
 		"1.9",
 		"block",
-		"../bilder/download/bg3.png",
+		"bilder/download/bg3.png",
 	],
 	[
 		"1.10",
 		"block",
-		"../bilder/download/bg4.png",
+		"bilder/download/bg4.png",
 	],
 ]
 
@@ -44,7 +44,7 @@ function changeVersion(elmt,currentElemnt){ //elmt wird mit this übergeben, cur
 
 		var j=0;
 		for(let i=512;i>=64;i/=2){
-			dButtons[j].href="../texturePacks/"+version+"/FlatShadowPack"+i+"x"+i+"_"+version+".zip"; //Ändert den Downloadlink
+			dButtons[j].href="texturePacks/"+version+"/FlatShadowPack"+i+"x"+i+"_"+version+".zip"; //Ändert den Downloadlink
 			j++;
 		}
 		

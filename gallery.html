@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Get a sweet taste for the unique Texture Pack of Flat Shadow.">
+		
+		<meta name="keywords" content="Flat Shadow, Gallery, Texture Pack, Blocks, Items">
+		<meta name="author" content="Julian Haidn">
+		
+		<link rel="icon" type="image/svg" href="bilder/Logo/Logo.svg">
+		<title>Gallery</title>
+		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="stylesheet/styleLoading.css" type="text/css">
+		<link rel="stylesheet" href="stylesheet/styleAll.css" type="text/css">
+		<link rel="stylesheet" href="stylesheet/styleGallery.css" type="text/css">
+		<style>
+			
+		</style>
+	</head>
+	<body onresize="resizeFunction()">
+		<!-- Loading... -->
+		<div class="loadingScreen">
+			<img src="bilder/background/loading.svg" alt="loading...">
+		</div>
+		
+		<nav class="menu" id="menuBody"> <!-- Menü -->
+			<a href="index" id="Logo"><img alt="Logo" src="bilder/Logo/LogoSchwarz.svg"></a>
+			<div class="icon" onClick="openMenu()"><i class="fa fa-bars" id="iconFont"></i></div>
+			<p>
+				<a href="index">Overview</a><i class="space">&nbsp;-&nbsp;</i>
+				<a href="download">Download</a><i class="space">&nbsp;-&nbsp;</i>
+				<a id="visit">Gallery</a><i class="space">&nbsp;-&nbsp;</i>
+				<a href="aboutMe">About Me</a>
+			</p>
+		</nav>
+		
+		<header>
+			<h1>Flat Shadow</h1>
+			<h3>Gallery</h3>
+		</header>
+			
+		<main>
+			<div class="divGallery"> <!-- Gallery -->
+				<div class="divText">
+					<h4>Get a sweet taste for the unique style of Flat Shadow.</h4>
+				</div>
+
+				<!--   Blöcke   -->
+				<div class="galleryFrame"> <!-- Infobox für Texturenart -->
+					<div class="infobox">
+						<div class="cutLeft"></div>
+						<div class="cutRight"></div>
+						<p>Blocks</p>
+					</div>
+
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textDirt">Grass</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(0,0,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(0,0,1)"></i>
+
+							<img id="blockDirt" src="bilder/gallery/block/dirt_0.png" alt="dirt Image" /> <!--Bild und Schatten-->
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textLog">Oak Log</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(0,1,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(0,1,1)"></i>
+
+							<img id="blockLog" src="bilder/gallery/block/logs_0.png" alt="log Image" />
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textPlanks">Oak Planks</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(0,3,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(0,3,1)"></i>
+
+							<img id="blockPlanks" src="bilder/gallery/block/planks_0.png" alt="plank Image" /> 
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox">
+							<p id="textStone">Stone</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(0,4,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(0,4,1)"></i>
+
+							<img id="blockStone" src="bilder/gallery/block/stone_0.png" alt="stone Image" />
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textOre">Diamond Ore</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(0,5,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(0,5,1)"></i>
+
+							<img id="blockOre" src="bilder/gallery/block/ore_0.png" alt="ore Image" />
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textWork">Crafting Table</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(0,2,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(0,2,1)"></i>
+
+							<img id="blockWork" src="bilder/gallery/block/work_0.png" alt="work Image" />
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+
+
+				<div class="spacer"></div>  <!--   Items   -->
+
+				<div class="galleryFrame"> <!-- Infobox für Texturenart -->
+					<div class="infobox">
+						<div class="cutLeft"></div>
+						<div class="cutRight"></div>
+						<p>Items</p>
+					</div>
+
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textSword">Diomond sword</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(1,0,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(1,0,1)"></i>
+
+							<img id="itemSword" src="bilder/gallery/items/sword0.png" alt="sword Image" style="height: 65%;margin-top:10px;"/>
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textTool">Pickaxe</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(1,1,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(1,1,1)"></i>
+
+							<img id="itemTool" src="bilder/gallery/items/tool0.png" alt="tool Image" />
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textResource">Diamond</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(1,2,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(1,2,1)"></i>
+
+							<img id="itemResource" src="bilder/gallery/items/resource0.png" alt="resource Image" /> 
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textAnimal">Porkchop Raw</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(1,4,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(1,4,1)"></i>
+
+							<img id="itemAnimal" src="bilder/gallery/items/animal0.png" alt="animal Image" />
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textPlant">Wheat</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(1,3,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(1,3,1)"></i>
+
+							<img id="itemPlant" src="bilder/gallery/items/plant0.png" alt="plant Image" />
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div class="blockFrame">
+						<div class="blockBox" >
+							<p id="textExtra">Book</p>
+							<i class="fa fa-angle-left" onclick="changeIMG(1,5,-1)"></i>
+							<i class="fa fa-angle-right" onclick="changeIMG(1,5,1)"></i>
+
+							<img id="itemExtra" src="bilder/gallery/items/extra0.png" alt="extra Image" />
+							<div class="shadow"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+			</div>
+
+			<h3 class="text">Irgendwos mit Texture Pack</h3>
+		</main>
+		
+		<footer>
+			<div class="footerTop">
+				<div class="linkFrame">
+					<div class="CircleFrame">
+						<a href="https://www.youtube.com/channel/UCiCGrCuvTRuxOSg63eyC_6g" class="socialMedia" target="_blank">
+							<i class="fa fa-youtube-play"></i>
+						</a>
+						<p>YouTube</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="https://twitter.com/flat_shadow" class="socialMedia" target="_blank">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<p>Twitter</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="https://www.reddit.com/user/flatshadow_textures" class="socialMedia" target="_blank">
+							<i class="fa fa-reddit"></i>
+						</a>
+						<p>Reddit</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="https://www.instagram.com/flatshadow_textures/" class="socialMedia" target="_blank">
+							<i class="fa fa-instagram"></i>
+						</a>
+						<p>Instagram</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="mailto:flatshadow.mail@gmail.com" class="socialMedia" target="_blank">
+							<i class="fa fa-envelope"></i>
+						</a>
+						<p>Mail</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="footerBot">
+				<p>&copy; FlatShadow | <a href="legalDisclosure">Legal Disclosure</a></p>
+				<p>Creator: Julian Haidn</p>
+			</div>
+		</footer>
+		
+		<script src="script/gallery.js"></script>
+		<script src="script/menu.js"></script>
+		<script src="script/loading.js"></script>
+		<script>
+			window.onload = function(){
+				resizeFunction();
+				fade();
+			}
+			
+			function resizeFunction(){
+				var cw = $('.socialMedia').width();
+				$('.socialMedia').css({'height':cw+'px'});
+			}
+		</script>
+	</body>
+</html>
