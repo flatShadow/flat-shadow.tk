@@ -10,7 +10,6 @@
 #changeFrame{
 	width:70%;
 	margin:auto;
-	
 }
 #pic1,#pic2{
 	position:absolute;
@@ -66,7 +65,7 @@
 	z-index: 10;
 }
 
-.divBild p{
+.divBild p{ /* ratate Phone */
 	display: none;
 	position: absolute;
 	top: -50px;
@@ -77,6 +76,16 @@
 	z-index: 15;
 	animation: phoneTurn 2.1s ease-out infinite;
 }
+
+.divBild a{
+	position: absolute;
+	bottom: 0;
+	right: 15%;
+	bottom: 65px;
+	font-size: 1.8rem;
+	z-index: 20;
+}
+
 
 @keyframes phoneTurn{
 	0%{
@@ -98,6 +107,13 @@
 		transform: rotate(-90deg);
 	}
 }
+
+@media screen and (max-width: 980px) and (orientation: portrait){
+	.divBild p{
+		display: block;
+	}
+}
+
 
 /* - ladescreen der Bilder - */
 .loadingImg{

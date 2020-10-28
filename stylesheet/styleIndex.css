@@ -29,10 +29,11 @@
 	
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 980px) and (orientation: portrait){
 	.startAnimation h1{
 		font-size:22vw;
 		line-height: 90%;
+		-webkit-text-stroke-width: 0.5vw;
 	}
 }
 

@@ -7,15 +7,10 @@
 :root{
 	--type1: "Riffic";
 	--type2: "Matias";
-	--type3: "Powerweld";
 }
 @font-face { 
 	font-family: 'Matias';
     src: url('../type/Matias_Webfont.ttf') format('truetype');
-}
-@font-face { 
-	font-family: 'Powerweld';
-    src: url('../type/Powerweld.ttf') format('truetype');
 }
 @font-face { 
 	font-family: 'Riffic';
@@ -38,10 +33,13 @@ h1{
 	line-height: 1em;
 	margin-top: calc(150px + calc(2.5rem + 30px));
 }
+h2{
+	font-family: var(--type1);
+}
 h3{
 	font-family: var(--type1);
 	color:#353535;
-	font-size:3.1em;
+	font-size:3.1rem;
 	text-align:center;
 	margin-bottom:150px;
 }
@@ -52,8 +50,29 @@ h4{
 	font-size:3.1em;
 	text-align:center;
 }
+a{
+	color: #fff;
+	text-decoration: underline;
+	cursor: pointer;
+	transition: 0.2s;
+}
+a:hover{
+	color: #bbb;
+}
+
 .text{
 	margin:150px 0px;
+}
+
+.text a{
+	position: absolute;
+	color: #353535;
+	font-size: 1.5rem;
+	width: 100%;
+	left: 0;
+}
+.text a:hover{
+	color: #777;
 }
 
 /* - Bereich Überschrift - */
@@ -99,6 +118,7 @@ h4{
 }
 .menu #visit, .menu a:hover, .menu .icon:hover{
 	color:#188f9e;
+	transition:0.2s;
 }
 /*Höhe: 2.5em + 30px*/
 .menu .icon{
@@ -110,19 +130,22 @@ h4{
 	cursor:pointer;
 	transition:0.2s;
 }
-@media screen and (max-width: 980px) { /*bei kleinem Fenster*/
+
+@media screen and (max-width: 980px){ /*Menü anzeige änern*/
 	.menu p{ /*elemente ausblenden*/
 		display: none;
 	}
 	.menu .icon { /*icon anzeigen*/
 		display: block;
 	}
+}
+
+@media screen and (max-width: 980px) and (orientation: portrait){ /*bei kleinem Fenster*/
 	.menu img{
 		height:3.8rem;
 	}
-	
-	
 	/*Anpassen der Schriftgröße*/
+	
 	html{
 		font-size: 2.1em;
 	}
@@ -147,6 +170,7 @@ h4{
 		max-width: 980px;
 	}
 }
+
 .menu.responsive .space{
 	display:none;
 }
@@ -167,7 +191,6 @@ h4{
 footer{
 	position:relative;
 	width:100%;
-	height:400px;
 	background-color:#303030;
 	
 	font-size:1.5em;
@@ -177,7 +200,8 @@ footer{
 footer .footerTop{
 	position: relative;
 	width: 100%;
-	height: 80%;
+	height: 320px;
+	
 }
 .linkFrame{ /*Frame für alle Linkcirles*/
 	position: absolute;
@@ -231,18 +255,14 @@ footer .footerTop{
 	bottom: -6px;
 }
 
-
 footer .footerBot{
 	position: relative;
 	width: 100%;
-	height: 20%;
 	outline: #fff 3px solid;
+	padding: 10px 0;
 }
 footer .footerBot p{
-	position: absolute;
+	position: relative;
 	width: 100%;
 	text-align: center;
-	top: 50%;
-	transform:translateY(-50%);
-	-webkit-transform:translateY(-50%);
 }

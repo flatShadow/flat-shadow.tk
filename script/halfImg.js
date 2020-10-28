@@ -3,19 +3,7 @@ document.getElementsByClassName("startAnimation")[0].children[0].style.animation
 document.getElementsByClassName("startAnimation")[0].children[1].style.animationPlayState = "paused";
 document.getElementsByClassName("startAnimation")[0].children[1].children[0].style.animationPlayState = "paused";
 
-//Animation der Drehaufforderung
-var handy = document.getElementById('rotate');
 
-function orentationHint(){
-	var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
-	if(orientation === "landscape-primary"){
-		handy.style.display = "none";
-	 }
-	else{
-		handy.style.display = "block";
-	}
-}
-window.addEventListener("orientationchange", orentationHint);
 
 //  --- Regler und Bild anpassen
 window.onload = function(){
@@ -26,11 +14,7 @@ window.onload = function(){
 	var modul = document.getElementById("modul");
 	var div1 = document.getElementById("changeFrame");
 	div1.onmousemove = changePC;
-	//div1.ontouchstart = changeMobile;
-	resizeFunction();
-	orentationHint();
-	
-	
+	resizeFunction();	
 }
 var pic1 = document.getElementById("pic1");
 	var pic2 = document.getElementById("pic2");

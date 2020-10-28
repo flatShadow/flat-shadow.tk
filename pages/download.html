@@ -2,12 +2,13 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content="Minecraft Texturepack">
-		<meta name="keywords" content="Flat Shadow, Flat Shadow Pack, Flat Shadow download, Minecraft Texturepack, Minecraft, Free Texturepack, Free Minecraft Texturepack, Texturepack, Comic Style,Comic">
+		<meta name="description" content="Download the unique Texture Pack of Flat Shadow.">
+		
+		<meta name="keywords" content="Flat Shadow, Flat Shadow download, download, 512x512, 256x256, 128x128, 64x64, Texture Pack">
 		<meta name="author" content="Julian Haidn">
 		
 		<link rel="icon" type="image/svg" href="../bilder/Logo/Logo.svg">
-		<title>Flat Shadow</title>
+		<title>Download</title>
 		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -26,109 +27,113 @@
 			<img src="../bilder/background/loading.svg" alt="loading...">
 		</div>
 		
-		<div class="menu" id="menuBody"> <!----  Menü  ---->
+		<nav class="menu" id="menuBody"> <!---- Menü  ---->
 			<a href="../index.html" id="Logo"><img alt="Logo" src="../bilder/Logo/LogoSchwarz.svg"></a>
 			<div class="icon" onClick="openMenu()"><i class="fa fa-bars" id="iconFont"></i></div>
 			<p>
 				<a href="../index.html">Overview</a><i class="space">&nbsp;-&nbsp;</i>
 				<a id="visit">Download</a><i class="space">&nbsp;-&nbsp;</i>
 				<a href="gallery.html">Gallery</a><i class="space">&nbsp;-&nbsp;</i>
-				<a href="aboutMe.html">About me</a>
+				<a href="aboutMe.html">About Me</a>
 			</p>
-		</div>
+		</nav>
 		
-		<h1>Flat Shadow</h1>
-		<h3>download</h3>
+		<header>
+			<h1>Flat Shadow</h1>
+			<h3>Download</h3>
+		</header>
 		
-		<div class="divDownload"> <!----  Download Box		---->
-			<div class="divText">
-				<h4>Download this Texturepack in your perfect resulution and Minecraft Version.</h4>
+		<main>
+			<div class="divDownload"> <!---- Download Box ---->
+				<div class="divText">
+					<h4>Download this Texture Pack in your perfect resulution and Minecraft Version.</h4>
+				</div>
+
+				<div class="downloadFrame" id="downloadFr">
+					<div class="alphaInfo" id="alphaInfo">
+						<i class="fa fa-close" id="close"></i>
+						<p>	The alpha version of this texture pack inculdes all items and block of <u>Minecraft 1.8</u>. 
+							All the other textures and versions are coming soon.
+						</p>
+					</div>
+					<script>
+						document.getElementById('close').onclick = function(){
+							document.getElementById('alphaInfo').style.display = "none";
+						};
+					</script>
+
+					<div class="infoboxFrame">
+						<div class="infobox" id="description">
+							<div class="cutLeft"></div>
+							<div class="cutRight"></div>
+							<p>Minecraft Version:</p>
+						</div>
+						<div class="infobox active" onClick="changeVersion(this,0)">
+							<div class="cutLeft"></div>
+							<div class="cutRight"></div>
+							<p>Alpha</p>
+						</div>
+						<div class="infobox version" onClick="changeVersion(this,1)">
+							<div class="cutLeft"></div>
+							<div class="cutRight"></div>
+							<p>1.7</p>
+						</div>
+						<div class="infobox version" onClick="changeVersion(this,2)">
+							<div class="cutLeft"></div>
+							<div class="cutRight"></div>
+							<p>1.8</p>
+						</div>
+						<div class="infobox version" onClick="changeVersion(this,3)">
+							<div class="cutLeft"></div>
+							<div class="cutRight"></div>
+							<p>1.9</p>
+						</div>
+						<div class="infobox version" onClick="changeVersion(this,4)">
+							<div class="cutLeft"></div>
+							<div class="cutRight"></div>
+							<p>1.10</p>
+						</div>
+					</div>
+					<div class="downloadBox leftBox">
+						<div class="centerBox">
+							<h5>512x512 <small class="tVersion">alpha</small></h5> <!--<p id="infoText1">(Best Quality)</p>-->
+							<img src="../bilder/download/512.png" alt="512x512"/>
+							<p>high performance needed</p>
+							<a class="downloadButton" href="https://rebrand.ly/alpha_512x512"> download</a>
+						</div>
+					</div>
+					<div class="downloadBox rightBox">
+						<div class="centerBox">
+							<h5>256x256 <small class="tVersion">alpha</small></h5>
+							<img src="../bilder/download/256.png" alt="256x256"/>
+							<a class="downloadButton" href="https://rebrand.ly/alpha_256x256">download</a>
+						</div>
+					</div>
+					<div class="downloadBox leftBox">
+						<div class="centerBox">
+							<h5>128x128 <small class="tVersion">alpha</small></h5>
+							<img src="../bilder/download/128.png" alt="128x128"/>
+							<a class="downloadButton" href="https://rebrand.ly/alpha_128x128">download</a>
+						</div>
+					</div>
+					<div class="downloadBox rightBox">
+						<div class="centerBox">
+							<h5>64x64 <small class="tVersion">alpha</small></h5> <!--<p id="infoText2">(Best Performance)</p>-->
+							<img src="../bilder/download/64.png" alt="64x64"/>
+							<a class="downloadButton" href="https://rebrand.ly/alpha_64x64" >download</a>
+						</div>
+					</div>
+					<div style="clear:both;"></div><!--Endet das float:left-->
+
+					<div class="comingSoon" id="soon">
+						<h2>coming soon</h2>
+					</div>
+
+				</div>
 			</div>
-			
-			<div class="downloadFrame" id="downloadFr">
-				<div class="alphaInfo" id="alphaInfo">
-					<i class="fa fa-close" id="close"></i>
-					<p>	The alpha version of this texture pack inculdes all items and block of <u>Minecraft 1.8</u>. 
-						All the other textures and versions are coming soon.
-					</p>
-				</div>
-				<script>
-					document.getElementById('close').onclick = function(){
-						document.getElementById('alphaInfo').style.display = "none";
-					};
-				</script>
-				
-				<div class="infoboxFrame">
-					<div class="infobox" id="description">
-						<div class="cutLeft"></div>
-						<div class="cutRight"></div>
-						<p>Minecraft Version:</p>
-					</div>
-					<div class="infobox active" onClick="changeVersion(this,0)">
-						<div class="cutLeft"></div>
-						<div class="cutRight"></div>
-						<p>Alpha</p>
-					</div>
-					<div class="infobox version" onClick="changeVersion(this,1)">
-						<div class="cutLeft"></div>
-						<div class="cutRight"></div>
-						<p>1.7</p>
-					</div>
-					<div class="infobox version" onClick="changeVersion(this,2)">
-						<div class="cutLeft"></div>
-						<div class="cutRight"></div>
-						<p>1.8</p>
-					</div>
-					<div class="infobox version" onClick="changeVersion(this,3)">
-						<div class="cutLeft"></div>
-						<div class="cutRight"></div>
-						<p>1.9</p>
-					</div>
-					<div class="infobox version" onClick="changeVersion(this,4)">
-						<div class="cutLeft"></div>
-						<div class="cutRight"></div>
-						<p>1.10</p>
-					</div>
-				</div>
-				<div class="downloadBox leftBox">
-					<div class="centerBox">
-						<h5>512x512 <small class="tVersion">alpha</small></h5> <!--<p id="infoText1">(Best Quality)</p>-->
-						<img src="../bilder/download/512.png" alt="512x512"/>
-						<p>high performance needed</p>
-						<a class="downloadButton" href="https://rebrand.ly/alpha_512x512"> download</a>
-					</div>
-				</div>
-				<div class="downloadBox rightBox">
-					<div class="centerBox">
-						<h5>256x256 <small class="tVersion">alpha</small></h5>
-						<img src="../bilder/download/256.png" alt="256x256"/>
-						<a class="downloadButton" href="https://rebrand.ly/alpha_256x256">download</a>
-					</div>
-				</div>
-				<div class="downloadBox leftBox">
-					<div class="centerBox">
-						<h5>128x128 <small class="tVersion">alpha</small></h5>
-						<img src="../bilder/download/128.png" alt="128x128"/>
-						<a class="downloadButton" href="https://rebrand.ly/alpha_128x128">download</a>
-					</div>
-				</div>
-				<div class="downloadBox rightBox">
-					<div class="centerBox">
-						<h5>64x64 <small class="tVersion">alpha</small></h5> <!--<p id="infoText2">(Best Performance)</p>-->
-						<img src="../bilder/download/64.png" alt="64x64"/>
-						<a class="downloadButton" href="https://rebrand.ly/alpha_64x64" >download</a>
-					</div>
-				</div>
-				<div style="clear:both;"></div><!--Endet das float:left-->
-				
-				<div class="comingSoon" id="soon">
-					<h2>coming soon</h2>
-				</div>
-				
-			</div>
-		</div>
-		
-		<h3 class="text">Now enjoy the beauty of Minecraft.</h3>
+
+			<h3 class="text">Now enjoy the new beauty of Minecraft.</h3>
+		</main>
 		
 		<footer>
 			<div class="footerTop">
@@ -167,7 +172,8 @@
 			</div>
 			
 			<div class="footerBot">
-				<p>&copy; FlatShadow | Creator: Julian Haidn</p>
+				<p>&copy; FlatShadow | <a href="legalDisclosure.html">Legal Disclosure</a></p>
+				<p>Creator: Julian Haidn</p>
 			</div>
 		</footer>
 		

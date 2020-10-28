@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content="Minecraft Texturepack">
-		<meta name="keywords" content="Flat Shadow, Flat Shadow Pack, Flat Shadow download, Minecraft Texturepack, Minecraft, Free Texturepack, Free Minecraft Texturepack, Texturepack, Comic Style,Comic">
+		<meta name="description" content="Flat Shadow, the Texture Pack, which gives Minecraft a pixelfree and unique style.">
+		
+		<meta name="keywords" content="Flat Shadow, Minecraft Texture Pack, Minecraft, Texture Pack, Free Texturepack,  pixelfree, vector graphics">
+		
 		<meta name="author" content="Julian Haidn">
 		
 		<link rel="icon" type="image/svg" href="bilder/Logo/Logo.svg">
@@ -16,6 +18,7 @@
 		<link rel="stylesheet" href="stylesheet/styleAll.css" type="text/css">
 		<link rel="stylesheet" href="stylesheet/halfImg.css" type="text/css">
 		<link rel="stylesheet" href="stylesheet/styleIndex.css" type="text/css">
+		
 		<style type="text/css">
 			html{ /*keine Scrollbar beim Laden*/
 				overflow: hidden;
@@ -28,55 +31,60 @@
 			<img src="bilder/background/loadingLogo.gif" alt="loading...">
 		</div>
 		
-		<div class="menu" id="menuBody"> <!----  Menü  ---->
+		<nav class="menu" id="menuBody"> <!---- Menü  ---->
 			<a id="Logo"><img alt="Logo" src="bilder/Logo/LogoSchwarz.svg"></a>
 			<div class="icon" onClick="openMenu()"><i class="fa fa-bars" id="iconFont"></i></div>
 			<p>
 				<a id="visit">Overview</a><i class="space">&nbsp;-&nbsp;</i>
 				<a href="pages/download.html">Download</a><i class="space">&nbsp;-&nbsp;</i>
 				<a href="pages/gallery.html">Gallery</a><i class="space">&nbsp;-&nbsp;</i>
-				<a href="pages/aboutMe.html">About me</a>
+				<a href="pages/aboutMe.html">About Me</a>
 			</p>
-		</div>
+		</nav>
 		
-		<div class="startAnimation">
+		<header class="startAnimation">
 			<h1>Flat Shadow</h1>
 			<div class="imgFrame">				
 				<img src="bilder/background/bg_animation3.png" alt="island">
-				<!--<img src="bilder/gallery/block/dirt_0.png" alt="island">-->
 			</div>
 			<!--<h3>The Texturepack of your choice.</h3>-->
-		</div>
+		</header>
 		
-		<div class="divVideo"> <!----  YT Video  ---->
-			<div class="YTframe">
-				<div class="YT">
-					<iframe width="1019" height="573" src="https://www.youtube.com/embed/FsfLjLlJmlM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<main>
+			<div class="divVideo"> <!----  YT Video  ---->
+				<div class="YTframe">
+					<div class="YT">
+						<iframe width="1019" height="573" src="https://www.youtube.com/embed/FsfLjLlJmlM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
 				</div>
 			</div>
-		</div>
-		
-		<h3 class="text">Every texture is an vector image.</h3>
-		
-		<div class="divBild">
-			<i class="fa fa-angle-left" id="leftArr" onClick="changeImg(-1)"></i>
-			<i class="fa fa-angle-right" id="rightArr" onClick="changeImg(1)"></i>
-			<div id="changeFrame" ontouchmove="changePC(event)">
-				<img src="bilder/halfImg/default1.png" id="pic1" alt="default" />
-				<img src="bilder/halfImg/FS1.png"  id="pic2" alt="Flat Shadow" />
-				<img src="bilder/halfImg/Modul.svg" id="modul" />
-				
-				<div class="lockImg"></div> <!--Sperrt die Bilder vom drücken-->
-			</div>
 			
-			<div class="loadingImg" id="loadIMG">
-				<img src="bilder/background/loading2.gif" alt="loading...">
-			</div>
 			
-			<p class="fa fa-mobile-phone" id="rotate"></p>
-		</div>
-		
-		<h3 class="text">Minecraft is no pixelgame anymore.</h3>
+			<h3 class="text">Due to vector graphics, this Texturepack is pixelfree.<br/>
+				<a href="pages/aboutMe.html">More about vector graphics</a>
+			</h3>
+
+			<div class="divBild">
+				<i class="fa fa-angle-left" id="leftArr" onClick="changeImg(-1)"></i>
+				<i class="fa fa-angle-right" id="rightArr" onClick="changeImg(1)"></i>
+				<div id="changeFrame" ontouchmove="changePC(event)">
+					<img src="bilder/halfImg/default1.png" id="pic1" alt="default" />
+					<img src="bilder/halfImg/FS1.png"  id="pic2" alt="Flat Shadow" />
+					<img src="bilder/halfImg/Modul.svg" id="modul" />
+
+					<div class="lockImg"></div> <!--Sperrt die Bilder vom drücken-->
+				</div>
+
+				<div class="loadingImg" id="loadIMG">
+					<img src="bilder/background/loading2.gif" alt="loading...">
+				</div>
+
+				<p class="fa fa-mobile-phone" id="rotate"></p>
+				<a href="pages/download.html">download now</a>
+			</div>
+
+			<h3 class="text">Download this Minecraft Texturepack for free</h3>
+		</main>
 		
 		<footer>
 			<div class="footerTop">
@@ -115,7 +123,8 @@
 			</div>
 			
 			<div class="footerBot">
-				<p>&copy; FlatShadow | Creator: Julian Haidn</p>
+				<p>&copy; FlatShadow | <a href="pages/legalDisclosure.html">Legal Disclosure</a></p>
+				<p>Creator: Julian Haidn</p>
 			</div>
 		</footer>
 		

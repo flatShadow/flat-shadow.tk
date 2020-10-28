@@ -214,10 +214,7 @@
 	font-family: var(--type1);
 }
 
-
-
-
-@media screen and (max-width: 980px) { /*Wenn noch kleiner erfordert wird*/
+@media screen and (max-width: 980px) and (orientation: portrait){ /*Wenn noch kleiner erfordert wird*/
 	.downloadBox{
 		width:100%;
 	}

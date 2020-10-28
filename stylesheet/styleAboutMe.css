@@ -65,7 +65,7 @@
 	transform:translateX(-100%);
 	-webkit-transform:translateX(-100%);
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 980px) and (orientation: portrait){
 	.contentLayer{
 		left: 0px;
 		width: 100%;
