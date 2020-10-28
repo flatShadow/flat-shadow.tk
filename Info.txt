@@ -1,2 +1,4 @@
 Website: https://flatshadow.github.io/flat-shadow.com
 downloadzahl: https://www.rebrandly.com/
+
+.htacces: fügt ein .html in der URL an (für XAMPP)
