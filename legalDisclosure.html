@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="the Legal Disclosure of Flat Shadow">
+		<meta name="keywords" content="Flat Shadow, Legal Disclosure, Contact Information, Disclaimer">
+		<meta name="author" content="Julian Haidn">
+		
+		<link rel="icon" type="image/svg" href="../bilder/Logo/Logo.svg">
+		<title>Legal Disclosure</title>
+		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="../stylesheet/styleLoading.css" type="text/css">
+		<link rel="stylesheet" href="../stylesheet/styleAll.css" type="text/css">
+		<link rel="stylesheet" href="../stylesheet/styleLegalDisclosure.css" type="text/css">
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body onresize="resizeFunction()">
+		<!-- Loading... -->
+		<div class="loadingScreen">
+			<!--<img src="../bilder/background/loadingLogo.gif" alt="loading...">-->
+			<img src="../bilder/background/loading.svg" alt="loading...">
+		</div>
+		
+		<nav class="menu" id="menuBody"> <!----  Menü  ---->
+			<a href="../index.html" id="Logo"><img alt="Logo" src="../bilder/Logo/LogoSchwarz.svg"></a>
+			<div class="icon" onClick="openMenu()"><i class="fa fa-bars" id="iconFont"></i></div>
+			<p>
+				<a href="../index.html">Overview</a><i class="space">&nbsp;-&nbsp;</i>
+				<a href="download.html">Download</a><i class="space">&nbsp;-&nbsp;</i>
+				<a href="gallery.html">Gallery</a><i class="space">&nbsp;-&nbsp;</i>
+				<a href="aboutMe.html">About me</a>
+			</p>
+		</nav>
+		<header>
+			<h1>Flat Shadow</h1>
+			<h3>Legal Disclosure</h3>
+		</header>
+		<main class="contentBox">
+			<div class="contentLayer">
+				<p>Information in accordance with Section 5 TMG
+				<br><br>Perschlingtalstraße 8<br>3144 Wald
+				</p>
+				<h2>Contact Information</h2>
+				<p>Telephone: 06507523462<br>E-Mail: <a href="mailto:flatshadow.mail@gmail.com">flatshadow.mail@gmail.com</a><br>Internet address: <a href="https://flatshadow.github.io/flat-shadow.com/" target="_blank">https://flatshadow.github.io/flat-shadow.com/</a></p>
+				
+				<h2>Disclaimer</h2>
+				<h3>Accountability for content</h3>
+				<p>The contents of my pages have been created with the utmost care. However, I cannot guarantee the contents' accuracy, completeness or topicality. According to statutory provisions, I am furthermore responsible for my own content on these web pages. In this matter, please note that I am not obliged to monitor the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity. My obligations to remove or block the use of information under generally applicable laws remain unaffected by this as per §§ 8 to 10 of the Telemedia Act (TMG).</p>
+					
+				<h3>Accountability for links</h3>
+				<p>Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the linked pages. No violations were evident to me at the time of linking. Should any legal infringement become known to me, I will remove the respective link immediately.</p>
+				
+				<h3>Copyright</h3>
+				<p>My web pages and their contents are subject to German copyright law. Unless expressly permitted by law, every form of utilizing, reproducing or processing works subject to copyright protection on my web pages requires the prior consent of the respective owner of the rights. Individual reproductions of a work are only allowed for private use. The materials from these pages are copyrighted and any unauthorized use may violate copyright laws.</p>
+				<p><i>Source: <a href="http://www.translate-24h.de" target="_blank">impressum generator at translate-24h.de</a></i></p>
+				
+			</div>
+			<div class="rails"></div>
+		</main>
+		
+		<footer>
+			<div class="footerTop">
+				<div class="linkFrame">
+					<div class="CircleFrame">
+						<a href="https://www.youtube.com/channel/UCiCGrCuvTRuxOSg63eyC_6g" class="socialMedia" target="_blank">
+							<i class="fa fa-youtube-play"></i>
+						</a>
+						<p>YouTube</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="https://twitter.com/flat_shadow" class="socialMedia" target="_blank">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<p>Twitter</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="https://www.reddit.com/user/flatshadow_textures" class="socialMedia" target="_blank">
+							<i class="fa fa-reddit"></i>
+						</a>
+						<p>Reddit</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="https://www.instagram.com/flatshadow_textures/" class="socialMedia" target="_blank">
+							<i class="fa fa-instagram"></i>
+						</a>
+						<p>Instagram</p>
+					</div>
+					<div class="CircleFrame">
+						<a href="mailto:flatshadow.mail@gmail.com" class="socialMedia" target="_blank">
+							<i class="fa fa-envelope"></i>
+						</a>
+						<p>Mail</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="footerBot">
+				<p>&copy; FlatShadow | <a href="legalDisclosure.html">Legal Disclosure</a></p>
+				<p>Creator: Julian Haidn</p>
+			</div>
+		</footer>
+		
+		
+		<script src="../script/menu.js"></script>
+		<script src="../script/version.js"></script>
+		<script src="../script/loading.js"></script>
+		<script>
+			window.onload = function(){
+				resizeFunction();
+				fade();
+			}
+			
+			function resizeFunction(){
+				var cw = $('.socialMedia').width();
+				$('.socialMedia').css({'height':cw+'px'});
+			}
+		</script>
+	</body>
+</html>
