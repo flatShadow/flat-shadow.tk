@@ -94,7 +94,7 @@
 	}
 }
 
-@media only screen and (max-width: 980px){
+@media only screen and (max-width: 980px) and (orientation: portrait){
 	.blockFrame{
 		width: 100%;
 		height: 65vw;
@@ -103,7 +103,6 @@
 		width: 65vw;
 	}
 }
-
 
 /* Bild, Schatten und Animation*/
 .blockBox img{

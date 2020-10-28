@@ -14,7 +14,7 @@ window.onload = function(){
 	var modul = document.getElementById("modul");
 	var div1 = document.getElementById("changeFrame");
 	div1.onmousemove = changePC;
-	resizeFunction();	
+	resizeFunction();
 }
 var pic1 = document.getElementById("pic1");
 	var pic2 = document.getElementById("pic2");
