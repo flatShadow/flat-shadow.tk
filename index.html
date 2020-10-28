@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description" content="Flat Shadow, the Texture Pack, which gives Minecraft a pixelfree and unique style.">
@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="stylesheet/halfImg.css" type="text/css">
 		<link rel="stylesheet" href="stylesheet/styleIndex.css" type="text/css">
 		
-		<style type="text/css">
+		<style>
 			html{ /*keine Scrollbar beim Laden*/
 				overflow: hidden;
 			}
@@ -31,7 +31,7 @@
 			<img src="bilder/background/loadingLogo.gif" alt="loading...">
 		</div>
 		
-		<nav class="menu" id="menuBody"> <!---- Menü  ---->
+		<nav class="menu" id="menuBody"> <!-- Menü -->
 			<a id="Logo"><img alt="Logo" src="bilder/Logo/LogoSchwarz.svg"></a>
 			<div class="icon" onClick="openMenu()"><i class="fa fa-bars" id="iconFont"></i></div>
 			<p>
@@ -47,14 +47,13 @@
 			<div class="imgFrame">				
 				<img src="bilder/background/bg_animation3.png" alt="island">
 			</div>
-			<!--<h3>The Texturepack of your choice.</h3>-->
 		</header>
 		
 		<main>
-			<div class="divVideo"> <!----  YT Video  ---->
+			<div class="divVideo"> <!-- YT Video -->
 				<div class="YTframe">
 					<div class="YT">
-						<iframe width="1019" height="573" src="https://www.youtube.com/embed/FsfLjLlJmlM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe src="https://www.youtube.com/embed/FsfLjLlJmlM" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -67,10 +66,10 @@
 			<div class="divBild">
 				<i class="fa fa-angle-left" id="leftArr" onClick="changeImg(-1)"></i>
 				<i class="fa fa-angle-right" id="rightArr" onClick="changeImg(1)"></i>
-				<div id="changeFrame" ontouchmove="changePC(event)">
+				<div id="changeFrame">
 					<img src="bilder/halfImg/default1.png" id="pic1" alt="default" />
 					<img src="bilder/halfImg/FS1.png"  id="pic2" alt="Flat Shadow" />
-					<img src="bilder/halfImg/Modul.svg" id="modul" />
+					<img src="bilder/halfImg/Modul.svg" id="modul" alt="Modul" />
 
 					<div class="lockImg"></div> <!--Sperrt die Bilder vom drücken-->
 				</div>
