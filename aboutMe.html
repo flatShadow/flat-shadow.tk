@@ -64,7 +64,7 @@
 			<div class="contentLayer">
 				<p>
 					Hi,<br/>
-					I'm Julian the developer of Flat Shadow, 19 years old.<br>
+					I'm Julian the developer of Flat Shadow and <strong id="age"></strong> years old.<br>
 					In a little village in Austria is where the creativity lives. I have always loved being creative and designing stuff from scratch. Since the moment I got my first Computer I have tried to establish texture packs and now I'm creating my masterpiece Flat Shadow. Due to my interest in Illustrations, Flat Shadow consists of the unique style of vector graphics.
 				</p><br/>
 				<p>
@@ -129,6 +129,22 @@
 				var cw = $('.socialMedia').width();
 				$('.socialMedia').css({'height':cw+'px'});
 			}
+			/*Alter berechnen*/
+			
+			var dat = new Date(); /* Ermittelt das aktuelle Datum */
+			 function age(GebTag,GebMonat,GebJahr) {
+				var jahr  = dat.getFullYear();
+				var monat = dat.getMonth() + 1;
+				var tag   = dat.getDate();
+
+				if (monat < GebMonat)
+				   jahr = jahr-1;
+				else if ((monat == GebMonat) && (tag < GebTag))
+						 jahr = jahr-1;
+				return(jahr-GebJahr);
+			 }
+						
+			document.getElementById("age").innerHTML = age(25,01,2001);
 		</script>
 	</body>
 </html>
